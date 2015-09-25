@@ -93,6 +93,8 @@ def generate_data():
 		labels.append(int(f_name[jpg_idx-1:jpg_idx]))
 
 		count+=1
+		
+	yield (X_train,y_train)
 
 for X_epoch,y_epoch in generate_data():
 	#fit the batchsize to our model
